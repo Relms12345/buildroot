@@ -1,7 +1,8 @@
 config BR2_PACKAGE_DEBIANUTILS
 	bool "debianutils"
 	depends on BR2_USE_MMU # fork()
-	depends on BR2_PACKAGE_BUSYBOX_SHOW_OTHERS
+	select BR2_PACKAGE_START_STOP_DAEMON
+	select BR2_PACKAGE_WHICH
 	help
 	  Miscellaneous utilities specific to Debian.
 
