@@ -12,5 +12,6 @@ PRELINK_CROSS_LICENSE_FILES = COPYING
 # Sources from git, no configure script present
 PRELINK_CROSS_AUTORECONF = YES
 HOST_PRELINK_CROSS_DEPENDENCIES = host-elfutils host-libiberty
+HOST_PRELINK_CROSS_CONF_ENV = CFLAGS=-Wno-incompatible-pointer-types
 
 $(eval $(host-autotools-package))
